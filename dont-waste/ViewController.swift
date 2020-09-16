@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var viewPrimeiroAcesso: UIView!
-    @IBOutlet weak var viewLogin: UIView!
+    @IBOutlet weak var botaoPrimeiroAcesso: UIButton!
+    @IBOutlet weak var botaoLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewPrimeiroAcesso.layer.borderWidth = 1
-        self.viewPrimeiroAcesso.layer.borderColor = UIColor.black.cgColor
-        self.viewLogin.layer.borderWidth = 1
-        self.viewLogin.layer.borderColor = UIColor.black.cgColor
+        self.botaoPrimeiroAcesso.layer.borderWidth = 1
+        self.botaoPrimeiroAcesso.layer.borderColor = UIColor.black.cgColor
+        self.botaoLogin.layer.borderWidth = 1
+        self.botaoLogin.layer.borderColor = UIColor.black.cgColor
         
     }
 
