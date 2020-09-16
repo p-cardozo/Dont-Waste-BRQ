@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ProximoAcessoViewController: UIViewController {
 
     @IBOutlet weak var botaoProximo: UIButton!
@@ -21,21 +22,27 @@ class ProximoAcessoViewController: UIViewController {
         self.botaoProximo.layer.borderColor = UIColor.black.cgColor
     }
     
-    @IBAction func botaoProximo(_ sender: Any) {
-        if ((emailTextField.text?.validaEmail)!){
-            print("Email valido")
-        } else{
-            mostraAlerta()
-        }
-        
-        if ((senhaTextField.text?.validaSenha)!){
-            print("Senha valida")
-        } else{
-           mostraAlerta()
-        }
-        
+  //botao casa - para retornar para a pagina home
+    @IBAction func botaoCasa(_ sender: Any) {
     }
     
+   //botao dica - colocar dica da senha
+    @IBAction func botaoTooltip(_ sender: Any) {
+    }
+    
+    
+    @IBAction func botaoProximo(_ sender: Any) {
+        if emailTextField.text == "" || senhaTextField.text == ""{
+             mostraAlerta()
+        } else if emailTextField.text!.validaEmail && senhaTextField.text!.validaSenha {
+            print("tudo certo")
+        }else {
+           print("algum campo esta errado")
+        }
+    }
+    
+    
+    // popup alerta caso os campos estiverem vazios
     func mostraAlerta(){
     let alert = UIAlertController(title: "Atenção", message: "Preencha todos os campos", preferredStyle: UIAlertController.Style.alert)
     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
@@ -43,6 +50,7 @@ class ProximoAcessoViewController: UIViewController {
     }
 }
 
+// validacao email e senha
 extension String {
     
     var validaEmail: Bool {
@@ -57,5 +65,7 @@ extension String {
        
     }
 }
+
+
 
 
