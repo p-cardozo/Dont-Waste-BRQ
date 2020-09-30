@@ -430,6 +430,95 @@
             </objects>
             <point key="canvasLocation" x="1706" y="116"/>
         </scene>
+        <!--Password View Controller-->
+        <scene sceneID="X0U-xn-GhA">
+            <objects>
+                <viewController id="s9H-6L-4qh" customClass="PasswordViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dyD-hp-Iwa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ym-Nq-1cX" userLabel="Botao Casa">
+                                <rect key="frame" x="37" y="19.5" width="50" height="41.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="EzW-ef-cbm"/>
+                                    <constraint firstAttribute="height" constant="42" id="aNI-Uv-Fuj"/>
+                                </constraints>
+                                <color key="tintColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="house" catalog="system">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UmS-pg-bUs">
+                                <rect key="frame" x="127.5" y="120" width="120" height="117"/>
+                                <color key="tintColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="ZBl-a7-KkT"/>
+                                    <constraint firstAttribute="width" constant="120" id="sbh-PV-n64"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="9fB-Bj-ctd">
+                                <rect key="frame" x="37" y="313" width="301" height="34"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-p7-79U">
+                                <rect key="frame" x="188" y="632" width="187" height="35"/>
+                                <color key="backgroundColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="Ij2-iY-cRS"/>
+                                    <constraint firstAttribute="height" constant="35" id="h5h-A2-hZ8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="ENVIAR">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prl-Rf-dCw">
+                                <rect key="frame" x="37" y="346" width="59" height="34"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jAg-w7-fhX">
+                                <rect key="frame" x="99" y="346" width="239" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esqueci minha senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c65-LT-9cS">
+                                <rect key="frame" x="79.5" y="267" width="216" height="32"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9fB-Bj-ctd" firstAttribute="top" secondItem="UmS-pg-bUs" secondAttribute="bottom" constant="74.5" id="BWA-9i-CSl"/>
+                            <constraint firstAttribute="bottom" secondItem="9fB-Bj-ctd" secondAttribute="bottom" constant="320" id="CFi-Rx-WBC"/>
+                            <constraint firstItem="jAg-w7-fhX" firstAttribute="top" secondItem="c65-LT-9cS" secondAttribute="bottom" constant="47" id="Q6a-45-41s"/>
+                            <constraint firstItem="jAg-w7-fhX" firstAttribute="leading" secondItem="Prl-Rf-dCw" secondAttribute="trailing" constant="3" id="SMr-96-2JT"/>
+                            <constraint firstItem="9fB-Bj-ctd" firstAttribute="centerX" secondItem="c65-LT-9cS" secondAttribute="centerX" id="T3f-8X-tIs"/>
+                            <constraint firstItem="jAg-w7-fhX" firstAttribute="top" secondItem="Prl-Rf-dCw" secondAttribute="top" id="UOB-b4-L6B"/>
+                            <constraint firstItem="9fB-Bj-ctd" firstAttribute="leading" secondItem="YyR-3l-8u8" secondAttribute="leading" constant="37" id="YEh-0Q-dBN"/>
+                            <constraint firstItem="jAg-w7-fhX" firstAttribute="bottom" secondItem="Prl-Rf-dCw" secondAttribute="bottom" id="ZAY-5s-Y86"/>
+                            <constraint firstItem="9fB-Bj-ctd" firstAttribute="leading" secondItem="Prl-Rf-dCw" secondAttribute="leading" id="aC6-7J-TTW"/>
+                            <constraint firstItem="5Ym-Nq-1cX" firstAttribute="leading" secondItem="YyR-3l-8u8" secondAttribute="leading" constant="37" id="cpC-9g-pPM"/>
+                            <constraint firstItem="5Ym-Nq-1cX" firstAttribute="top" secondItem="YyR-3l-8u8" secondAttribute="top" constant="20" id="cw8-ne-X2O"/>
+                            <constraint firstItem="TSP-p7-79U" firstAttribute="trailing" secondItem="YyR-3l-8u8" secondAttribute="trailing" id="fW0-Ug-LYC"/>
+                            <constraint firstItem="YyR-3l-8u8" firstAttribute="trailing" secondItem="9fB-Bj-ctd" secondAttribute="trailing" constant="37" id="hDK-WV-pgi"/>
+                            <constraint firstItem="TSP-p7-79U" firstAttribute="bottom" secondItem="YyR-3l-8u8" secondAttribute="bottom" id="ij5-b1-Of4"/>
+                            <constraint firstItem="9fB-Bj-ctd" firstAttribute="top" secondItem="c65-LT-9cS" secondAttribute="bottom" constant="14" id="kvu-sP-XnD"/>
+                            <constraint firstItem="UmS-pg-bUs" firstAttribute="top" secondItem="YyR-3l-8u8" secondAttribute="top" constant="118.5" id="qqb-1b-J34"/>
+                            <constraint firstItem="UmS-pg-bUs" firstAttribute="centerX" secondItem="dyD-hp-Iwa" secondAttribute="centerX" id="sNW-vQ-g81"/>
+                            <constraint firstItem="9fB-Bj-ctd" firstAttribute="trailing" secondItem="jAg-w7-fhX" secondAttribute="trailing" id="zK8-oF-Hh1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YyR-3l-8u8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZaR-WR-jkY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ew5-Cq-cXZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2414" y="116"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Fundo" width="376" height="668"/>

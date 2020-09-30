@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24615F7A251D3DE60036FBE7 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24615F79251D3DE60036FBE7 /* CadastroViewController.swift */; };
+		24615F7C2524EAC70036FBE7 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24615F7B2524EAC70036FBE7 /* PasswordViewController.swift */; };
 		DDCE1579250BB1D500FE3C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE1578250BB1D500FE3C97 /* AppDelegate.swift */; };
 		DDCE157B250BB1D500FE3C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE157A250BB1D500FE3C97 /* SceneDelegate.swift */; };
 		DDCE157D250BB1D500FE3C97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE157C250BB1D500FE3C97 /* HomeViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		24615F79251D3DE60036FBE7 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		24615F7B2524EAC70036FBE7 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		DDCE1575250BB1D500FE3C97 /* dont-waste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dont-waste.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCE1578250BB1D500FE3C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDCE157A250BB1D500FE3C97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				DDCE157C250BB1D500FE3C97 /* HomeViewController.swift */,
 				DDCE158C250BECA000FE3C97 /* ProximoAcessoViewController.swift */,
 				24615F79251D3DE60036FBE7 /* CadastroViewController.swift */,
+				24615F7B2524EAC70036FBE7 /* PasswordViewController.swift */,
 				DDCE157E250BB1D500FE3C97 /* Main.storyboard */,
 				DDCE1581250BB1D700FE3C97 /* Assets.xcassets */,
 				DDCE1583250BB1D700FE3C97 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 				DDCE1579250BB1D500FE3C97 /* AppDelegate.swift in Sources */,
 				24615F7A251D3DE60036FBE7 /* CadastroViewController.swift in Sources */,
 				DDCE157B250BB1D500FE3C97 /* SceneDelegate.swift in Sources */,
+				24615F7C2524EAC70036FBE7 /* PasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
