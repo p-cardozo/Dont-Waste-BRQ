@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ESB-kn-ExI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ESB-kn-ExI">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -76,7 +78,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eci-5G-bJe">
                                 <rect key="frame" x="0.0" y="632" width="375" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-rB-sTn">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-rB-sTn">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="35"/>
                                         <color key="backgroundColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -84,13 +86,13 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="PRIMEIRO ACESSO">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" systemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <segue destination="RVq-7q-3CF" kind="show" id="nly-lr-a1o"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddy-KR-HYJ">
+                                    <button opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddy-KR-HYJ">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="35"/>
                                         <color key="backgroundColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -98,13 +100,17 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="LOGIN">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" systemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="PtS-fi-Xhz" kind="show" id="clB-1d-ddU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9g3-xb-fU5" firstAttribute="top" secondItem="CUW-9e-gwx" secondAttribute="bottom" constant="20" id="1ZI-kg-Naf"/>
                             <constraint firstItem="eci-5G-bJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3RG-Qr-tju"/>
@@ -125,7 +131,6 @@
                             <constraint firstItem="40R-Db-EKD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="saH-87-WFx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CUW-9e-gwx" secondAttribute="trailing" constant="70" id="yhZ-FN-qvK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="b8g-MX-eBP"/>
                     <connections>
@@ -145,8 +150,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xs-nP-tGU" userLabel="Botao Casa">
-                                <rect key="frame" x="37" y="19.5" width="50" height="41.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xs-nP-tGU" userLabel="Botao Casa">
+                                <rect key="frame" x="37" y="20" width="50" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="8GU-MJ-TVQ"/>
                                     <constraint firstAttribute="width" constant="50" id="q72-Jh-pcT"/>
@@ -202,7 +207,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="cBd-dP-oTX">
                                 <rect key="frame" x="96" y="409" width="242" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXx-IN-D30" userLabel="Botao Tooltip">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXx-IN-D30" userLabel="Botao Tooltip">
                                         <rect key="frame" x="222" y="0.5" width="20" height="19"/>
                                         <color key="tintColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" backgroundImage="questionmark.circle.fill" catalog="system">
@@ -220,7 +225,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWy-dN-sOy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWy-dN-sOy">
                                 <rect key="frame" x="188" y="632" width="187" height="35"/>
                                 <color key="backgroundColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -229,7 +234,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                 <state key="normal" title="PRÓXIMO">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="botaoProximo:" destination="RVq-7q-3CF" eventType="touchUpInside" id="Zpo-QN-lgh"/>
@@ -237,7 +242,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="exG-Ab-wK6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Dcd-Ub-S7R" firstAttribute="leading" secondItem="exG-Ab-wK6" secondAttribute="leading" constant="37" id="5AD-ZD-P6c"/>
                             <constraint firstItem="exG-Ab-wK6" firstAttribute="trailing" secondItem="Dcd-Ub-S7R" secondAttribute="trailing" constant="37" id="C79-2H-Wf2"/>
@@ -255,7 +261,6 @@
                             <constraint firstItem="Wh5-Z1-Rb2" firstAttribute="centerX" secondItem="5ct-hP-XHm" secondAttribute="centerX" id="xbI-Kx-oHn"/>
                             <constraint firstItem="exG-Ab-wK6" firstAttribute="trailing" secondItem="QkX-XC-I5A" secondAttribute="trailing" constant="37" id="zGH-uD-fVK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="exG-Ab-wK6"/>
                     </view>
                     <navigationItem key="navigationItem" id="IbQ-0I-1xT"/>
                     <connections>
@@ -320,23 +325,23 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="87" translatesAutoresizingMaskIntoConstraints="NO" id="30y-zl-EE4">
                                 <rect key="frame" x="0.0" y="632" width="375" height="35"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy8-zt-s2J">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jy8-zt-s2J">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="35"/>
                                         <color key="backgroundColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="VOLTAR">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" systemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <action selector="botaoVoltar:" destination="dE7-a3-LSV" eventType="touchUpInside" id="tpW-oC-dAd"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1D-Y7-wme">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1D-Y7-wme">
                                         <rect key="frame" x="231" y="0.0" width="144" height="35"/>
                                         <color key="backgroundColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
                                         <state key="normal" title="SALVAR">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleColor" systemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <action selector="saveButton:" destination="dE7-a3-LSV" eventType="touchUpInside" id="6dr-LW-jXV"/>
@@ -347,8 +352,8 @@
                                     <constraint firstAttribute="height" constant="35" id="ijs-B1-uZ4"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNp-4o-0Hm">
-                                <rect key="frame" x="37" y="19.5" width="50" height="41.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNp-4o-0Hm">
+                                <rect key="frame" x="37" y="20" width="50" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="RxT-wa-laX"/>
                                     <constraint firstAttribute="width" constant="50" id="bBf-kq-2h4"/>
@@ -392,7 +397,8 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rFd-li-0GY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0zI-tz-Ljj" firstAttribute="leading" secondItem="rFd-li-0GY" secondAttribute="leading" constant="20" id="8X3-mz-J3P"/>
                             <constraint firstAttribute="trailing" secondItem="0zI-tz-Ljj" secondAttribute="trailing" constant="20" id="C2w-ha-dN2"/>
@@ -414,7 +420,6 @@
                             <constraint firstItem="30y-zl-EE4" firstAttribute="bottom" secondItem="rFd-li-0GY" secondAttribute="bottom" id="v1T-lM-BZg"/>
                             <constraint firstItem="0zI-tz-Ljj" firstAttribute="top" secondItem="rRo-8d-OUU" secondAttribute="bottom" constant="10" id="xWg-ZB-3K3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="rFd-li-0GY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zb0-fh-bJo"/>
                     <connections>
@@ -430,12 +435,146 @@
             </objects>
             <point key="canvasLocation" x="1706" y="116"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Uge-X2-i0j">
+            <objects>
+                <viewController id="PtS-fi-Xhz" customClass="LoginViewController" customModule="dont_waste" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ykr-Fz-qei">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9tD-Tc-2wh" userLabel="Botao Casa">
+                                <rect key="frame" x="37" y="20" width="50" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="WRX-dK-SoZ"/>
+                                    <constraint firstAttribute="width" constant="50" id="zzJ-FA-fFC"/>
+                                </constraints>
+                                <color key="tintColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="house" catalog="system">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gVv-Tq-LeD">
+                                <rect key="frame" x="127.5" y="120" width="120" height="117"/>
+                                <color key="tintColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="yJj-DF-NTH"/>
+                                    <constraint firstAttribute="height" constant="120" id="zTy-b8-MAk"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="szc-qa-fpX">
+                                <rect key="frame" x="37" y="313" width="301" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6I-fN-0h4">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="34"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACh-xO-g5X">
+                                        <rect key="frame" x="62" y="0.0" width="239" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G3T-rp-YTc">
+                                <rect key="frame" x="37" y="367" width="301" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xg-Fx-9a0">
+                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="34"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jsb-hE-4ye">
+                                        <rect key="frame" x="61.5" y="0.0" width="239.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="myw-si-Zlb">
+                                <rect key="frame" x="96" y="409" width="242" height="29"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cut-e8-NmO">
+                                        <rect key="frame" x="129" y="0.0" width="113" height="29"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <state key="normal" title="Esqueci minha senha">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zny-5R-o69">
+                                <rect key="frame" x="188" y="632" width="187" height="35"/>
+                                <color key="backgroundColor" red="0.38431372549999998" green="0.72549019609999998" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="0DA-o7-ywJ"/>
+                                    <constraint firstAttribute="width" constant="187" id="Myj-c1-TwZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Logar">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mlA-Zw-RYY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9tD-Tc-2wh" firstAttribute="top" secondItem="mlA-Zw-RYY" secondAttribute="top" constant="20" id="7GW-Jw-kyD"/>
+                            <constraint firstItem="szc-qa-fpX" firstAttribute="leading" secondItem="mlA-Zw-RYY" secondAttribute="leading" constant="37" id="9rh-kD-Sib"/>
+                            <constraint firstItem="gVv-Tq-LeD" firstAttribute="top" secondItem="mlA-Zw-RYY" secondAttribute="top" constant="118.5" id="AOP-nG-Yf0"/>
+                            <constraint firstItem="myw-si-Zlb" firstAttribute="top" secondItem="G3T-rp-YTc" secondAttribute="bottom" constant="8" id="J8g-yq-abn"/>
+                            <constraint firstItem="gVv-Tq-LeD" firstAttribute="centerX" secondItem="ykr-Fz-qei" secondAttribute="centerX" id="JXB-iJ-L5g"/>
+                            <constraint firstItem="9tD-Tc-2wh" firstAttribute="leading" secondItem="mlA-Zw-RYY" secondAttribute="leading" constant="37" id="QDy-VA-ujS"/>
+                            <constraint firstItem="G3T-rp-YTc" firstAttribute="top" secondItem="szc-qa-fpX" secondAttribute="bottom" constant="20" id="UQt-3L-8Gb"/>
+                            <constraint firstItem="mlA-Zw-RYY" firstAttribute="trailing" secondItem="G3T-rp-YTc" secondAttribute="trailing" constant="37" id="WLf-G6-BIN"/>
+                            <constraint firstItem="mlA-Zw-RYY" firstAttribute="trailing" secondItem="szc-qa-fpX" secondAttribute="trailing" constant="37" id="Y6m-BO-FTF"/>
+                            <constraint firstItem="G3T-rp-YTc" firstAttribute="leading" secondItem="mlA-Zw-RYY" secondAttribute="leading" constant="37" id="YHC-iW-VIG"/>
+                            <constraint firstItem="zny-5R-o69" firstAttribute="trailing" secondItem="mlA-Zw-RYY" secondAttribute="trailing" id="fkR-gc-bap"/>
+                            <constraint firstItem="zny-5R-o69" firstAttribute="bottom" secondItem="mlA-Zw-RYY" secondAttribute="bottom" id="ors-qg-n5I"/>
+                            <constraint firstItem="szc-qa-fpX" firstAttribute="top" secondItem="gVv-Tq-LeD" secondAttribute="bottom" constant="74.5" id="pyS-9I-wWu"/>
+                            <constraint firstItem="mlA-Zw-RYY" firstAttribute="trailing" secondItem="myw-si-Zlb" secondAttribute="trailing" constant="37" id="tu9-Ku-ylc"/>
+                            <constraint firstItem="myw-si-Zlb" firstAttribute="leading" secondItem="mlA-Zw-RYY" secondAttribute="leading" constant="96" id="w8p-fd-lj9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="O1g-py-EPf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ihp-mL-6zQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="826"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Fundo" width="376" height="668"/>
-        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="logo_dontwaste" width="268" height="244"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
