@@ -8,15 +8,14 @@
 
 import UIKit
 
-
 class ProximoAcessoViewController: UIViewController{
 
     @IBOutlet weak var botaoProximo: UIButton!
-    
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var senhaTextField: UITextField!
     @IBOutlet weak var dicaLabel: UILabel!
     
+    @IBOutlet weak var validationLabel: UILabel!
     
     override func viewDidLoad() {
         dicaLabel.isHidden = true
@@ -26,6 +25,8 @@ class ProximoAcessoViewController: UIViewController{
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
+        
+        validationLabel.isHidden = true
     }
     
     var timer: Timer?
@@ -47,16 +48,37 @@ class ProximoAcessoViewController: UIViewController{
         dicaLabel.isHidden = true
         }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
+    
     @IBAction func botaoProximo(_ sender: Any) {
+    
         if emailTextField.text == "" || senhaTextField.text == ""{
              mostraAlerta(mensagem: "Preencha todos os campos")
         } else
             if emailTextField.text!.validaEmail && senhaTextField.text!.validaSenha {
-            print("tudo certo")
+               performSegue(withIdentifier: "cadastroViewController", sender: nil)
+               
         }else {
-           mostraAlerta(mensagem: "Algum campo esta inválido")
+            if emailTextField.text?.validaEmail == false{
+                validationLabel.isHidden = false
+                validationLabel.text = "Email invalido"
+            } else{
+                senhaTextField.text?.validaSenha == false
+                validationLabel.isHidden = false
+                validationLabel.text = "Senha invalida"
+            }
+            
         }
+        timer = Timer.scheduledTimer (timeInterval: 3.0, target: self, selector: #selector (actionTimer), userInfo: nil, repeats: false)
     }
+    
+    @objc func actionTimer () {
+        validationLabel.isHidden = true
+        }
+    
+    
     
     // popup alerta caso os campos estiverem vazios ou invalidos
     func mostraAlerta(mensagem: String){
@@ -66,21 +88,6 @@ class ProximoAcessoViewController: UIViewController{
     }
 }
 
-// validacao email e senha
-extension String {
-    
-    var validaEmail: Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{3}"
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: self)
-    }
-    
-    var validaSenha: Bool {
-        let passwordValidation = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[0-9]).{6,8}$")
-        return passwordValidation.evaluate(with: self)
-       
-    }
-}
 
 
     
