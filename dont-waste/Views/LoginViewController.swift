@@ -16,6 +16,11 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var validationLabel: UILabel!
     
+    @IBAction func esqueciSenha(_ sender: UIButton) {
+        performSegue(withIdentifier: "esqueciSenha", sender: Any?.self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
