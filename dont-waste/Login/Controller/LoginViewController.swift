@@ -16,6 +16,11 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var validationLabel: UILabel!
     
+    @IBAction func esqueciSenha(_ sender: UIButton) {
+        performSegue(withIdentifier: "esqueciSenha", sender: Any?.self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,7 +44,7 @@ class LoginViewController: UIViewController {
              mostraAlerta(mensagem: "Preencha todos os campos")
         } else
             if emailTextField.text!.validaEmail && passwordTextField.text!.validaSenha {
-                performSegue(withIdentifier: "cadastroViewController", sender: nil)
+                performSegue(withIdentifier: "homeLogadaViewController", sender: nil)
         }else {
             if emailTextField.text?.validaEmail == false{
                 validationLabel.isHidden = false
@@ -50,9 +55,6 @@ class LoginViewController: UIViewController {
                 validationLabel.text = "Senha invalida"
             }
         }
-       
-        
-        
     }
     
     
