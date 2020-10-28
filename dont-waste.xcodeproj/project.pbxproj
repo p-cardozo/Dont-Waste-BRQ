@@ -11,6 +11,8 @@
 		DD76575D2524E9BB005960CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD76575C2524E9BB005960CE /* LoginViewController.swift */; };
 		DD78566B25406F83004C5786 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD78566A25406F83004C5786 /* PasswordViewController.swift */; };
 		DD8C030A252B9BAB006B2362 /* String+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8C0309252B9BAB006B2362 /* String+Validation.swift */; };
+		DDAA95A22545DAF50014FEA4 /* HomeLogadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA95A12545DAF50014FEA4 /* HomeLogadaViewController.swift */; };
+		DDAA95A525465B150014FEA4 /* TeladeCategoriasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA95A425465B150014FEA4 /* TeladeCategoriasViewController.swift */; };
 		DDCE1579250BB1D500FE3C97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE1578250BB1D500FE3C97 /* AppDelegate.swift */; };
 		DDCE157B250BB1D500FE3C97 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE157A250BB1D500FE3C97 /* SceneDelegate.swift */; };
 		DDCE157D250BB1D500FE3C97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE157C250BB1D500FE3C97 /* HomeViewController.swift */; };
@@ -25,6 +27,8 @@
 		DD76575C2524E9BB005960CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DD78566A25406F83004C5786 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		DD8C0309252B9BAB006B2362 /* String+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validation.swift"; sourceTree = "<group>"; };
+		DDAA95A12545DAF50014FEA4 /* HomeLogadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLogadaViewController.swift; sourceTree = "<group>"; };
+		DDAA95A425465B150014FEA4 /* TeladeCategoriasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeladeCategoriasViewController.swift; sourceTree = "<group>"; };
 		DDCE1575250BB1D500FE3C97 /* dont-waste.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dont-waste.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCE1578250BB1D500FE3C97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDCE157A250BB1D500FE3C97 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,30 +59,63 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		DD8C0310252BBAF3006B2362 /* Views */ = {
+		DD8C0312252BBB7B006B2362 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDAA95B52548DC3A0014FEA4 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				DDAA95B62548DC700014FEA4 /* Controller */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		DDAA95B62548DC700014FEA4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				DDCE157C250BB1D500FE3C97 /* HomeViewController.swift */,
 				DDCE158C250BECA000FE3C97 /* ProximoAcessoViewController.swift */,
 				24615F79251D3DE60036FBE7 /* CadastroViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DDAA95B82548DCCC0014FEA4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DDAA95B92548DCF30014FEA4 /* Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DDAA95B92548DCF30014FEA4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				DD76575C2524E9BB005960CE /* LoginViewController.swift */,
 				DD78566A25406F83004C5786 /* PasswordViewController.swift */,
 			);
-			path = Views;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		DD8C0312252BBB7B006B2362 /* Models */ = {
+		DDAA95BD2548DEFD0014FEA4 /* HomeLogada */ = {
 			isa = PBXGroup;
 			children = (
+				DDAA95BE2548DF3E0014FEA4 /* Controller */,
 			);
-			path = Models;
+			path = HomeLogada;
 			sourceTree = "<group>";
 		};
-		DD8C0313252BBB87006B2362 /* Controllers */ = {
+		DDAA95BE2548DF3E0014FEA4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DDAA95A12545DAF50014FEA4 /* HomeLogadaViewController.swift */,
+				DDAA95A425465B150014FEA4 /* TeladeCategoriasViewController.swift */,
 			);
-			path = Controllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		DDCE156C250BB1D500FE3C97 = {
@@ -100,12 +137,13 @@
 		DDCE1577250BB1D500FE3C97 /* dont-waste */ = {
 			isa = PBXGroup;
 			children = (
+				DD8C030F252BBAD5006B2362 /* Extensions */,
+				DD8C0312252BBB7B006B2362 /* Model */,
+				DDAA95B52548DC3A0014FEA4 /* Cadastro */,
+				DDAA95B82548DCCC0014FEA4 /* Login */,
+				DDAA95BD2548DEFD0014FEA4 /* HomeLogada */,
 				DDCE1578250BB1D500FE3C97 /* AppDelegate.swift */,
 				DDCE157A250BB1D500FE3C97 /* SceneDelegate.swift */,
-				DD8C030F252BBAD5006B2362 /* Extensions */,
-				DD8C0312252BBB7B006B2362 /* Models */,
-				DD8C0310252BBAF3006B2362 /* Views */,
-				DD8C0313252BBB87006B2362 /* Controllers */,
 				DDCE157E250BB1D500FE3C97 /* Main.storyboard */,
 				DDCE1581250BB1D700FE3C97 /* Assets.xcassets */,
 				DDCE1583250BB1D700FE3C97 /* LaunchScreen.storyboard */,
@@ -188,7 +226,9 @@
 				DD76575D2524E9BB005960CE /* LoginViewController.swift in Sources */,
 				DD78566B25406F83004C5786 /* PasswordViewController.swift in Sources */,
 				DDCE157D250BB1D500FE3C97 /* HomeViewController.swift in Sources */,
+				DDAA95A22545DAF50014FEA4 /* HomeLogadaViewController.swift in Sources */,
 				DDCE158D250BECA000FE3C97 /* ProximoAcessoViewController.swift in Sources */,
+				DDAA95A525465B150014FEA4 /* TeladeCategoriasViewController.swift in Sources */,
 				DDCE1579250BB1D500FE3C97 /* AppDelegate.swift in Sources */,
 				24615F7A251D3DE60036FBE7 /* CadastroViewController.swift in Sources */,
 				DDCE157B250BB1D500FE3C97 /* SceneDelegate.swift in Sources */,

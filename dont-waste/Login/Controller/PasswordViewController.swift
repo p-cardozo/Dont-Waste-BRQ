@@ -13,9 +13,11 @@ class PasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         validationLabel.isHidden = true
-        
+        self.sendButton.layer.borderWidth = 1
+        self.sendButton.layer.borderColor = UIColor.black.cgColor
     }
     
+    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var validationLabel: UILabel!
     @IBOutlet weak var emailField: UITextField!
     @IBAction func HomeButton(_ sender: Any) {

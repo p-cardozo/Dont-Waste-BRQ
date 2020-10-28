@@ -52,13 +52,13 @@ class CadastroViewController: UIViewController, UITextFieldDelegate, UIPickerVie
             {
                    mostraAlerta(mensagem: "Preencha todos os campos")
         } else {
-            navigationController?.popToRootViewController(animated: true)
             mostraAlerta(mensagem: "Informações Salvas")
-           
+            
         }
         
-        
        }
+    
+    
     
     // popup alerta caso os campos estiverem vazios ou invalidos
        func mostraAlerta(mensagem: String){

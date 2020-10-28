@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
              mostraAlerta(mensagem: "Preencha todos os campos")
         } else
             if emailTextField.text!.validaEmail && passwordTextField.text!.validaSenha {
-                performSegue(withIdentifier: "cadastroViewController", sender: nil)
+                performSegue(withIdentifier: "homeLogadaViewController", sender: nil)
         }else {
             if emailTextField.text?.validaEmail == false{
                 validationLabel.isHidden = false
@@ -55,9 +55,6 @@ class LoginViewController: UIViewController {
                 validationLabel.text = "Senha invalida"
             }
         }
-       
-        
-        
     }
     
     
